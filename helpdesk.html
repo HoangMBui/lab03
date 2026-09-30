@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CWA Help Desk Appointment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <a href="https://www.swin.edu.au"><img src="logo.png" alt="CWA Logo" class="logo"></a>
+
+    <h1>CWA Help Desk Appointment</h1>
+    <p>The helpdesk is located on ATC620. Open from 9:00 AM to 5:00 PM, Monday through Friday. <br> Check our blackboard
+        for when tutor not be there</p>
+
+    <form method="post" action="http://mercury.swin.edu.au/it000000/formtest.php">
+        <fieldset>
+            <legend>Student Details</legend>
+            <p><label for="Student ID">Student ID</label>
+                <input type="text" name="Student ID" id="Student ID" pattern="^[a-zA-Z0-9]{7,10}$"
+                    required="required" />
+            </p>
+            <p>
+                <label for="Given Name">Given Name</label>
+                <input type="text" name="Given Name" id="Given Name" pattern="^[a-zA-Z\s]+$" required="required" />
+
+                <label for="Family Name">Family Name</label>
+                <input type="text" name="Family Name" id="Family Name" pattern="^[a-zA-Z\s]+$" required="required" />
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Your unit</legend>
+            <p>
+                <input type="radio" name="Unit" id="COS10011" value="COS10011" required="required" />
+                <label for="COS10011">COS10011</label>
+
+                <input type="radio" name="Unit" id="COS60004" value="COS60004" required="required" />
+                <label for="COS60004">COS60004</label>
+
+                <input type="radio" name="Unit" id="COS60007" value="COS60007" required="required" />
+                <label for="COS60007">COS60007</label>
+            </p>
+            <p>
+                <label for="Tutor">Your tutor</label>
+                <select name="Tutor" id="Tutor" required="required">
+                    <option value="">Please Select</option>
+                    <option value="Tutor1">1</option>
+                    <option value="Tutor2">2</option>
+                    <option value="Tutor3">3</option>
+                </select>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Issue</legend>
+            <p>
+                <input type="checkbox" name="Issue" id="HTML" value="HTML" />
+                <label for="HTML">HTML</label>
+
+                <input type="checkbox" name="Issue" id="CSS" value="CSS" />
+                <label for="CSS">CSS</label>
+
+                <input type="checkbox" name="Issue" id="JavaScript" value="JavaScript" />
+                <label for="JavaScript">JavaScript</label>
+
+                <input type="checkbox" name="Issue" id="PHP" value="PHP" />
+                <label for="PHP">PHP</label>
+
+                <input type="checkbox" name="Issue" id="MySQL" value="MySQL" />
+                <label for="MySQL">MySQL</label>
+            </p>
+            <p>
+                <label for="Description">Description of Issue</label>
+            </p>
+            <textarea placeholder="Write description of your problem here..." id="Description" name="Description"
+                rows="4" cols="40" required="required"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>Preferred Date/Time</legend>
+            <p><label for="Date">Preferred Date</label>
+                <input type="text" name="Date" id="Date" placeholder="dd/mm/yyyy" pattern="\d{2}/\d{2}/\d{4}" required="required" />
+            </p>
+            <p><label for="Time">Preferred Time</label>
+                <input type="text" name="Time" id="Time" placeholder="00:00" pattern="\d{2}:\d{2}" required="required" />
+            </p>
+            <p>
+                <input type="submit" value="Book" />
+                <input type="reset" value="Reset Form" />
+            </p>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
